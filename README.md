@@ -1,7 +1,10 @@
 # 👋 Hi, I'm Salman Shahid
 
 <div align="center">
-<img src="assets/profile.jpg" width="180" style="border-radius:50%;" alt="Salman Shahid"/>
+<img src="https://raw.githubusercontent.com/abushahidsalman194/shahidsalman.github.io/main/WhatsApp%20Image%202026-02-07%20at%2010.03.19%20PM.jpeg" 
+     width="200" 
+     style="border-radius:50%;" 
+     alt="Salman Shahid"/>
 
 ### BSc Mathematics | Applied Mathematics Researcher | Aspiring MS/PhD
 
