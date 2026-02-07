@@ -5,8 +5,8 @@
 ### BSc Mathematics | Applied Mathematics Researcher | Aspiring MS/PhD
 
 📍 Shahjalal University of Science & Technology  
-🔬 Research Mentee @ REYES (UC Berkeley)  
-🚀 Aspire Leader @ Harvard Founders  
+🔬 Former Research Mentee @ REYES (UC Berkeley)  
+🚀 Former Aspire Leader @ Harvard Founders  
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](YOUR_LINKEDIN_URL)
 [![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your-email@example.com)
@@ -19,7 +19,7 @@
 
 I am an applied mathematics undergraduate passionate about leveraging **mathematical modeling, stochastic processes, and machine learning** to solve complex biological and real-world problems.
 
-My long-term goal is to pursue an **MS/PhD in Applied Mathematics**, focusing on mathematical oncology, computational biology, and AI-integrated modeling systems.
+My long-term goal is to pursue an **MS/PhD in Applied Mathematics**, focusing on Computational mathematics, and AI-integrated modeling systems.
 
 I believe mathematics is not just theoretical elegance — it is a predictive engine for life sciences, economics, and intelligent systems.
 
