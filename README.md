@@ -1,6 +1,7 @@
 # 👋 Hi, I'm Salman Shahid
 
 <div align="center">
+<img src="assets/profile.jpg" width="180" style="border-radius:50%;" alt="Salman Shahid"/>
 
 ### BSc Mathematics | Applied Mathematics Researcher | Aspiring MS/PhD
 
