@@ -19,9 +19,9 @@
 
 ---
 
-## 🧠 About Me
+##  About Me
 
-I am an applied mathematics undergraduate passionate about leveraging **mathematical modeling, stochastic processes, and machine learning** to solve complex biological and real-world problems.
+I am an mathematics undergraduate passionate about leveraging **mathematical modeling, stochastic processes, and machine learning** to solve complex biological and real-world problems.
 
 My long-term goal is to pursue an **MS/PhD in Applied Mathematics**, focusing on Computational mathematics, and AI-integrated modeling systems.
 
