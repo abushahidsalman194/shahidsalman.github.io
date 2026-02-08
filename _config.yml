@@ -1,41 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Salman Shahid</title>
+
 <style>
 body {
     margin: 0;
+    overflow: hidden;
     font-family: 'Segoe UI', sans-serif;
     background: #0f172a;
     color: #e2e8f0;
 }
 
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 .container {
     max-width: 900px;
     margin: auto;
-    padding: 60px 20px;
+    padding: 100px 20px;
+    text-align: center;
 }
 
 h1 {
-    font-size: 42px;
+    font-size: 48px;
     margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 25px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 h2 {
     color: #38bdf8;
-    margin-top: 40px;
-}
-
-.tagline {
-    font-size: 18px;
-    color: #94a3b8;
-}
-
-.card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
 }
 
 a {
@@ -50,27 +68,117 @@ a:hover {
 </head>
 
 <body>
+
+<canvas id="particles"></canvas>
+
 <div class="container">
     <h1>Salman Shahid</h1>
-    <p class="tagline">Applied Mathematics | Computational Oncology | Scientific ML</p>
+    <p class="subtitle">
+        Applied Mathematics • Computational Oncology • Scientific Machine Learning
+    </p>
 
     <div class="card">
         <h2>Research Focus</h2>
-        <p>Hybrid dynamical systems models integrating differential equations and machine learning for tumor growth prediction.</p>
+        <p>
+            Hybrid dynamical systems models integrating differential equations 
+            and machine learning for predictive tumor growth analysis.
+        </p>
     </div>
 
     <div class="card">
         <h2>Research Interests</h2>
-        <p>Mathematical Oncology • Stability Analysis • Scientific Machine Learning • Inverse Problems</p>
+        <p>
+            Mathematical Oncology • Nonlinear Dynamics • Stability Theory • 
+            Inverse Problems • Scientific Machine Learning
+        </p>
     </div>
 
     <div class="card">
         <h2>Contact</h2>
         <p>Email: abushahidsalman194@gmail.com</p>
-        <p><a href="https://linkedin.com">LinkedIn</a></p>
+        <p><a href="https://linkedin.com/in/abu-shahid-salman-867b66236/">LinkedIn</a></p>
     </div>
 </div>
+
+<script>
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particlesArray = [];
+
+class Particle {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedX = Math.random() * 0.5 - 0.25;
+        this.speedY = Math.random() * 0.5 - 0.25;
+    }
+
+    update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
+        if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
+    }
+
+    draw() {
+        ctx.fillStyle = "#38bdf8";
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
+}
+
+function init() {
+    particlesArray = [];
+    for (let i = 0; i < 120; i++) {
+        particlesArray.push(new Particle());
+    }
+}
+
+function connect() {
+    for (let a = 0; a < particlesArray.length; a++) {
+        for (let b = a; b < particlesArray.length; b++) {
+            let dx = particlesArray[a].x - particlesArray[b].x;
+            let dy = particlesArray[a].y - particlesArray[b].y;
+            let distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < 100) {
+                ctx.strokeStyle = "rgba(56,189,248,0.1)";
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                ctx.stroke();
+            }
+        }
+    }
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particlesArray.forEach(p => {
+        p.update();
+        p.draw();
+    });
+    connect();
+    requestAnimationFrame(animate);
+}
+
+init();
+animate();
+
+window.addEventListener("resize", function() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    init();
+});
+</script>
+
 </body>
 </html>
-
-
