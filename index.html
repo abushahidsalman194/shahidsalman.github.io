@@ -3,24 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Salman Shahid</title>
-
+<title>Portfolio Theme</title>
 <style>
+/* ===== General Body ===== */
 body {
     margin: 0;
-    overflow: hidden;
     font-family: 'Segoe UI', sans-serif;
     background: #0f172a;
     color: #e2e8f0;
+    overflow: hidden;
 }
 
-canvas {
+/* ===== Particle Canvas ===== */
+canvas#particles {
     position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
 }
 
+/* ===== Container for Content ===== */
 .container {
     max-width: 900px;
     margin: auto;
@@ -28,17 +30,25 @@ canvas {
     text-align: center;
 }
 
+/* ===== Headings ===== */
 h1 {
     font-size: 48px;
     margin-bottom: 10px;
 }
 
+h2 {
+    color: #38bdf8;
+    margin-top: 40px;
+}
+
+/* ===== Subtitles ===== */
 .subtitle {
     font-size: 18px;
     color: #94a3b8;
     margin-bottom: 40px;
 }
 
+/* ===== Card Boxes ===== */
 .card {
     background: rgba(30, 41, 59, 0.8);
     backdrop-filter: blur(10px);
@@ -52,10 +62,7 @@ h1 {
     transform: translateY(-5px);
 }
 
-h2 {
-    color: #38bdf8;
-}
-
+/* ===== Links ===== */
 a {
     color: #38bdf8;
     text-decoration: none;
@@ -72,35 +79,23 @@ a:hover {
 <canvas id="particles"></canvas>
 
 <div class="container">
-    <h1>Salman Shahid</h1>
-    <p class="subtitle">
-        Applied Mathematics • Computational Oncology • Scientific Machine Learning
-    </p>
+    <!-- Example placeholders -->
+    <h1>Portfolio Name</h1>
+    <p class="subtitle">Your Tagline / Research Focus</p>
 
     <div class="card">
-        <h2>Research Focus</h2>
-        <p>
-            Hybrid dynamical systems models integrating differential equations 
-            and machine learning for predictive tumor growth analysis.
-        </p>
+        <h2>Section Title</h2>
+        <p>Section content goes here. Replace this with your README text or Markdown-generated content.</p>
     </div>
 
     <div class="card">
-        <h2>Research Interests</h2>
-        <p>
-            Mathematical Oncology • Nonlinear Dynamics • Stability Theory • 
-            Inverse Problems • Scientific Machine Learning
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: abushahidsalman194@gmail.com</p>
-        <p><a href="https://linkedin.com/in/abu-shahid-salman-867b66236/">LinkedIn</a></p>
+        <h2>Another Section</h2>
+        <p>Another placeholder for content.</p>
     </div>
 </div>
 
 <script>
+/* ===== Particle Animation ===== */
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 
