@@ -100,23 +100,24 @@ Python (NumPy, Scikit-learn), MATLAB, LaTeX
 
 ---
 
-## 📊 GitHub Analytics
+## Mathematical Preparation
 
-<div align="center">
+### Theoretical Foundations  
+- Linear Algebra (proof-based)  
+- Topology  
+- Multivariable Calculus  
+- Probability & Stochastic Processes  
 
-<img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=nord&count_private=true" height="170"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=nord" height="170"/>
-
-</div>
-
----
+### Applied & Computational Areas
+- Ordinary Differential Equations 
+- Stability and Bifurcation Analysis  
+- Mthematical Modelling 
 
 ## 🌱 Currently Building
 
 - Mathematical tumor growth simulation models  
 - ML-integrated metastasis prediction pipeline  
-- Research documentation in LaTeX  
-- A structured graduate-level mathematics portfolio  
+   
 
 ---
 
