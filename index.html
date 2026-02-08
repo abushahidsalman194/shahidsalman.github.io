@@ -218,41 +218,113 @@ a:hover {
         <blockquote>“Mathematics reveals the invisible structure beneath complexity.”</blockquote>
     </div>
 </div>
-<!-- Top-right Buttons -->
-<div style="position: fixed; top: 20px; right: 20px; z-index: 10; display: flex; gap: 10px;">
-    <button class="panelBtn" data-target="projectsPanel">Projects</button>
-    <button class="panelBtn" data-target="publicationsPanel">Publications</button>
-    <button class="panelBtn" data-target="scoresPanel">Scores</button>
-</div>
+<!-- Buttons -->
+<button id="projectsBtn" style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 10;
+">Projects</button>
 
-<!-- Projects Panel -->
-<div id="projectsPanel" class="sidePanel">
-    <h2>Projects</h2>
-    <ul>
-        <li><a href="https://github.com/abushahidsalman194/project1" target="_blank">Tumor Growth Model</a></li>
-        <li><a href="https://github.com/abushahidsalman194/project2" target="_blank">ML Metastasis Prediction</a></li>
-        <li><a href="https://github.com/abushahidsalman194/project3" target="_blank">Dynamical Systems Simulation</a></li>
+<button id="publicationsBtn" style="
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 10;
+">Publications</button>
+
+<button id="scoresBtn" style="
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 10;
+">Scores</button>
+
+<!-- Panels -->
+<div id="projectsPanel" style="
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    width: 300px;
+    max-height: 70%;
+    overflow-y: auto;
+    background: rgba(30,41,59,0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    display: none;
+    z-index: 10;
+">
+    <h2 style="color:#38bdf8; margin-top:0;">Projects</h2>
+    <ul style="list-style:none; padding-left:0;">
+        <li><a href="https://github.com/abushahidsalman194/project1" target="_blank">Project 1 – Tumor Growth Model</a></li>
+        <li><a href="https://github.com/abushahidsalman194/project2" target="_blank">Project 2 – ML Metastasis Prediction</a></li>
+        <li><a href="https://github.com/abushahidsalman194/project3" target="_blank">Project 3 – Dynamical Systems Simulation</a></li>
     </ul>
 </div>
 
-<!-- Publications Panel -->
-<div id="publicationsPanel" class="sidePanel">
-    <h2>Publications</h2>
-    <ul>
-        <li><a href="https://doi.org/xxxx" target="_blank">Paper 1 – Modeling Tumor Growth</a></li>
-        <li><a href="https://doi.org/yyyy" target="_blank">Paper 2 – ML in Oncology</a></li>
-        <!-- Add more -->
+<div id="publicationsPanel" style="
+    position: fixed;
+    top: 140px;
+    right: 20px;
+    width: 300px;
+    max-height: 70%;
+    overflow-y: auto;
+    background: rgba(30,41,59,0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    display: none;
+    z-index: 10;
+">
+    <h2 style="color:#38bdf8; margin-top:0;">Publications</h2>
+    <ul style="list-style:none; padding-left:0;">
+        <li><a href="#" target="_blank">Publication 1 – Cancer Modeling</a></li>
+        <li><a href="#" target="_blank">Publication 2 – AI in Biology</a></li>
+        <li><a href="#" target="_blank">Publication 3 – Stochastic Systems</a></li>
     </ul>
 </div>
 
-<!-- Scores Panel -->
-<div id="scoresPanel" class="sidePanel">
-    <h2>Scores</h2>
-    <ul>
-        <li>GRE: 330 / 340</li>
-        <li>TOEFL: 112 / 120</li>
-        <li>Math Olympiad: Bronze</li>
-        <!-- Add more -->
+<div id="scoresPanel" style="
+    position: fixed;
+    top: 210px;
+    right: 20px;
+    width: 300px;
+    max-height: 70%;
+    overflow-y: auto;
+    background: rgba(30,41,59,0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    display: none;
+    z-index: 10;
+">
+    <h2 style="color:#38bdf8; margin-top:0;">Scores</h2>
+    <ul style="list-style:none; padding-left:0;">
+        <li>GRE: 330</li>
+        <li>TOEFL: 110</li>
+        <li>Math Olympiad / International Math Challenge: Bronze</li>
     </ul>
 </div>
 
