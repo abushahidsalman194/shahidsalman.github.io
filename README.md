@@ -100,26 +100,6 @@ Python (NumPy, Scikit-learn), MATLAB, LaTeX
 
 ---
 
-## Mathematical Preparation
-
-### Theoretical Foundations  
-- Linear Algebra (proof-based)  
-- Topology  
-- Multivariable Calculus  
-- Probability & Stochastic Processes  
-
-### Applied & Computational Areas
-- Ordinary Differential Equations 
-- Stability and Bifurcation Analysis  
-- Mthematical Modelling 
-
-## 🌱 Currently Building
-
-- Mathematical tumor growth simulation models  
-- ML-integrated metastasis prediction pipeline  
-   
-
----
 
 ## 📫 Let's Connect
 
