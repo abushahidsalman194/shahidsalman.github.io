@@ -105,37 +105,6 @@ a:hover {
 </head>
 
 <body>
-<!-- Top-Right Buttons -->
-<div class="top-right-buttons">
-    <button id="projectsBtn" class="top-btn">Projects</button>
-    <button id="publicationsBtn" class="top-btn">Publications</button>
-    <button id="scoresBtn" class="top-btn">Scores</button>
-</div>
-
-<!-- Panels -->
-<div id="projectsPanel" class="top-panel">
-    <h2>Projects</h2>
-    <ul>
-        <li><a href="https://github.com/abushahidsalman194/project1" target="_blank">Project 1 – Tumor Growth Model</a></li>
-        <li><a href="https://github.com/abushahidsalman194/project2" target="_blank">Project 2 – ML Metastasis Prediction</a></li>
-    </ul>
-</div>
-
-<div id="publicationsPanel" class="top-panel">
-    <h2>Publications</h2>
-    <ul>
-        <li><a href="https://link-to-publication1.com" target="_blank">Publication 1 – Modeling Tumor Growth</a></li>
-        <li><a href="https://link-to-publication2.com" target="_blank">Publication 2 – ML in Oncology</a></li>
-    </ul>
-</div>
-
-<div id="scoresPanel" class="top-panel">
-    <h2>Scores</h2>
-    <ul>
-        <li>IELTS – Overall 8.0 (Reading 8.5, Listening 8.0, Writing 7.5, Speaking 8.0)</li>
-        <li>GRE – Quant 167, Verbal 160, AWA 5.0</li>
-    </ul>
-</div>
 
 <canvas id="particles"></canvas>
 
@@ -248,6 +217,44 @@ a:hover {
         <hr>
         <blockquote>“Mathematics reveals the invisible structure beneath complexity.”</blockquote>
     </div>
+</div>
+<!-- Projects Button -->
+<button id="projectsBtn" style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 10;
+">Projects</button>
+
+<!-- Projects Panel -->
+<div id="projectsPanel" style="
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    width: 300px;
+    max-height: 70%;
+    overflow-y: auto;
+    background: rgba(30,41,59,0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    display: none;
+    z-index: 10;
+">
+    <h2 style="color:#38bdf8; margin-top:0;">Projects</h2>
+    <ul style="list-style:none; padding-left:0;">
+        <li><a href="https://github.com/abushahidsalman194/project1" target="_blank">Project 1 – Tumor Growth Model</a></li>
+        <li><a href="https://github.com/abushahidsalman194/project2" target="_blank">Project 2 – ML Metastasis Prediction</a></li>
+        <li><a href="https://github.com/abushahidsalman194/project3" target="_blank">Project 3 – Dynamical Systems Simulation</a></li>
+        <!-- Add more projects here -->
+    </ul>
 </div>
 
 
