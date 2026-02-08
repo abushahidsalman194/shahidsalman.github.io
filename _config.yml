@@ -1,4 +1,76 @@
-remote_theme: pages-themes/slate@v0.2.0
-plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+<!DOCTYPE html>
+<html>
+<head>
+<title>Salman Shahid</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #38bdf8;
+    margin-top: 40px;
+}
+
+.tagline {
+    font-size: 18px;
+    color: #94a3b8;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+    <h1>Salman Shahid</h1>
+    <p class="tagline">Applied Mathematics | Computational Oncology | Scientific ML</p>
+
+    <div class="card">
+        <h2>Research Focus</h2>
+        <p>Hybrid dynamical systems models integrating differential equations and machine learning for tumor growth prediction.</p>
+    </div>
+
+    <div class="card">
+        <h2>Research Interests</h2>
+        <p>Mathematical Oncology • Stability Analysis • Scientific Machine Learning • Inverse Problems</p>
+    </div>
+
+    <div class="card">
+        <h2>Contact</h2>
+        <p>Email: abushahidsalman194@gmail.com</p>
+        <p><a href="https://linkedin.com">LinkedIn</a></p>
+    </div>
+</div>
+</body>
+</html>
+
 
