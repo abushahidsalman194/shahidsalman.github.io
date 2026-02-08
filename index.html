@@ -3,18 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Theme</title>
+<title>Salman Shahid - Portfolio</title>
+
 <style>
-/* ===== General Body ===== */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: #0f172a;
     color: #e2e8f0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-/* ===== Particle Canvas ===== */
 canvas#particles {
     position: fixed;
     top: 0;
@@ -22,7 +21,6 @@ canvas#particles {
     z-index: -1;
 }
 
-/* ===== Container for Content ===== */
 .container {
     max-width: 900px;
     margin: auto;
@@ -30,10 +28,29 @@ canvas#particles {
     text-align: center;
 }
 
-/* ===== Headings ===== */
 h1 {
     font-size: 48px;
     margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: rgba(30, 41, 59, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 12px;
 }
 
 h2 {
@@ -41,28 +58,6 @@ h2 {
     margin-top: 40px;
 }
 
-/* ===== Subtitles ===== */
-.subtitle {
-    font-size: 18px;
-    color: #94a3b8;
-    margin-bottom: 40px;
-}
-
-/* ===== Card Boxes ===== */
-.card {
-    background: rgba(30, 41, 59, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 25px;
-    border-radius: 12px;
-    margin-top: 25px;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* ===== Links ===== */
 a {
     color: #38bdf8;
     text-decoration: none;
@@ -70,6 +65,41 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Markdown Styling */
+.markdown p, .markdown li {
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+.markdown strong {
+    color: #facc15;
+}
+
+.markdown em {
+    color: #f472b6;
+}
+
+.markdown blockquote {
+    border-left: 3px solid #38bdf8;
+    padding-left: 10px;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+.markdown table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.markdown th, .markdown td {
+    border: 1px solid #94a3b8;
+    padding: 8px;
+}
+
+.markdown th {
+    background-color: rgba(56,189,248,0.2);
 }
 </style>
 </head>
@@ -79,26 +109,118 @@ a:hover {
 <canvas id="particles"></canvas>
 
 <div class="container">
-    <!-- Example placeholders -->
-    <h1>Portfolio Name</h1>
-    <p class="subtitle">Your Tagline / Research Focus</p>
+    <div class="card markdown">
+        <h1>Hi, I'm Salman</h1>
 
-    <div class="card">
-        <h2>Section Title</h2>
-        <p>Section content goes here. Replace this with your README text or Markdown-generated content.</p>
-    </div>
+        <div align="center">
+            <img src="https://raw.githubusercontent.com/abushahidsalman194/shahidsalman.github.io/main/WhatsApp%20Image%202026-02-07%20at%2010.03.19%20PM.jpeg" 
+                 width="200" 
+                 alt="Salman Shahid"/>
+            <h3>BSc Mathematics | Applied Mathematics Researcher | Aspiring MS/PhD</h3>
+            <p>📍 Shahjalal University of Science & Technology<br>
+            🔬 Former Research Mentee @ REYES (UC Berkeley)<br>
+            🚀 Former Aspire Leader </p>
+            <p>
+                <a href="https://www.linkedin.com/in/abu-shahid-salman-867b66236/">LinkedIn</a> • 
+                <a href="mailto:abushahidsalman194@gmail.com">Email</a>
+            </p>
+        </div>
 
-    <div class="card">
-        <h2>Another Section</h2>
-        <p>Another placeholder for content.</p>
+        <hr>
+
+        <h2>About Me</h2>
+        <p>I am a mathematics undergraduate passionate about leveraging <strong>mathematical modeling, stochastic processes, and machine learning</strong> to solve complex biological and real-world problems.</p>
+        <p>My long-term goal is to pursue an <strong>MS/PhD in Applied Mathematics</strong>, focusing on computational mathematics and AI-integrated modeling systems.</p>
+        <p>I believe mathematics is not just theoretical elegance — it is a predictive engine for life sciences, economics, and intelligent systems.</p>
+
+        <hr>
+
+        <h2>🔬 Research Focus</h2>
+        <p>
+            <img src="https://img.shields.io/badge/Focus-Applied%20Mathematics-1f77b4?style=for-the-badge">
+            <img src="https://img.shields.io/badge/Field-Cancer%20Biology-d62728?style=for-the-badge">
+            <img src="https://img.shields.io/badge/Tech-Machine%20Learning-2ca02c?style=for-the-badge">
+            <img src="https://img.shields.io/badge/Method-Mathematical%20Modeling-9467bd?style=for-the-badge">
+            <img src="https://img.shields.io/badge/Writing-LaTeX-008080?style=for-the-badge">
+        </p>
+
+        <h3>📍 Current Research: Modeling Cancer Cell Proliferation</h3>
+        <p><strong>Objective:</strong> Developing hybrid mathematical–machine learning models to predict tumor growth dynamics and metastatic spread.</p>
+        <p><strong>Core Components:</strong></p>
+        <ul>
+            <li>Deterministic & stochastic differential equation modeling</li>
+            <li>Feature extraction from biological datasets</li>
+            <li>Supervised ML for predictive classification</li>
+            <li>Parameter sensitivity & stability analysis</li>
+        </ul>
+        <p><strong>Tools:</strong> Python (NumPy, Scikit-learn), MATLAB, LaTeX</p>
+        <p><strong>Status:</strong> Phase 1 – Model formulation & validation</p>
+
+        <hr>
+
+        <h2>🛠️ Technical Toolkit</h2>
+        <table>
+            <tr><th>Domain</th><th>Skills & Tools</th></tr>
+            <tr><td>Mathematics</td><td>Multivariable Calculus, Linear Algebra, Topology, Mathematical Modelling, Stochastic Processes</td></tr>
+            <tr><td>Modeling</td><td>Differential Equations, Stability Analysis, Probabilistic Models</td></tr>
+            <tr><td>Programming</td><td>Python (NumPy, Pandas, Scikit-learn), MATLAB, SQL</td></tr>
+            <tr><td>Research Tools</td><td>LaTeX, Data Analysis, Literature Review, Academic Writing</td></tr>
+            <tr><td>Other Skills</td><td>Project Management, Research Presentation</td></tr>
+        </table>
+
+        <hr>
+
+        <h2>📈 Research Interests (Graduate Direction)</h2>
+        <ul>
+            <li>Mathematical Oncology</li>
+            <li>AI-Augmented Scientific Modeling</li>
+            <li>Stochastic Modeling of Disease Progression</li>
+            <li>Applied Data Science</li>
+        </ul>
+
+        <hr>
+
+        <h2>🏆 Competitions & Recognition</h2>
+        <ul>
+            <li>🥉 International Youth Math Challenge – Bronze Honor (Top 80% globally)</li>
+            <li>🌍 Hult Prize 2023 – Regional Summit Waitlist (Team Retex)</li>
+            <li>🚀 Banglalink Ennovator 6.0 – Top 140 out of 20,000+ participants</li>
+            <li>📸 UNESCO Youth Photography 2023 – Two-time Shortlisted</li>
+            <li>💡 Needle Innovation Challenge – Semi-finalist (Bootcamp)</li>
+        </ul>
+
+        <hr>
+
+        <h2>🤝 Leadership & Impact</h2>
+        <ul>
+            <li>Campus Ambassador – Banglalink: Organized youth festivals with 800+ participants</li>
+            <li>Education Secretary – Copernicus Astronomical Memorial: Managed Astro Carnival & STEM outreach programs</li>
+            <li>Executive Member – Rescue Life Foundation: Fundraising & educational initiatives for underprivileged communities</li>
+        </ul>
+
+        <hr>
+
+        <h2>📫 Let's Connect</h2>
+        <p>I’m open to:</p>
+        <ul>
+            <li>Research collaborations</li>
+            <li>Graduate opportunities</li>
+            <li>Mathematical modeling projects</li>
+            <li>AI & biology integration discussions</li>
+        </ul>
+        <p>📧 Email: abushahidsalman194@gmail.com<br>
+           🔗 LinkedIn: <a href="https://www.linkedin.com/in/abu-shahid-salman-867b66236/">abu-shahid-salman</a>
+        </p>
+
+        <hr>
+        <blockquote>“Mathematics reveals the invisible structure beneath complexity.”</blockquote>
     </div>
 </div>
 
+<!-- Particle Animation Script -->
 <script>
-/* ===== Particle Animation ===== */
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
-
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -112,40 +234,34 @@ class Particle {
         this.speedX = Math.random() * 0.5 - 0.25;
         this.speedY = Math.random() * 0.5 - 0.25;
     }
-
     update() {
         this.x += this.speedX;
         this.y += this.speedY;
-
-        if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
-        if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
+        if(this.x>canvas.width || this.x<0) this.speedX*=-1;
+        if(this.y>canvas.height || this.y<0) this.speedY*=-1;
     }
-
     draw() {
         ctx.fillStyle = "#38bdf8";
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.arc(this.x, this.y, this.size,0, Math.PI*2);
         ctx.fill();
     }
 }
 
-function init() {
+function initParticles() {
     particlesArray = [];
-    for (let i = 0; i < 120; i++) {
-        particlesArray.push(new Particle());
-    }
+    for(let i=0;i<120;i++) particlesArray.push(new Particle());
 }
 
-function connect() {
-    for (let a = 0; a < particlesArray.length; a++) {
-        for (let b = a; b < particlesArray.length; b++) {
+function connectParticles() {
+    for(let a=0;a<particlesArray.length;a++){
+        for(let b=a;b<particlesArray.length;b++){
             let dx = particlesArray[a].x - particlesArray[b].x;
             let dy = particlesArray[a].y - particlesArray[b].y;
-            let distance = Math.sqrt(dx * dx + dy * dy);
-
-            if (distance < 100) {
+            let distance = Math.sqrt(dx*dx + dy*dy);
+            if(distance<100){
                 ctx.strokeStyle = "rgba(56,189,248,0.1)";
-                ctx.lineWidth = 1;
+                ctx.lineWidth=1;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
                 ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
@@ -155,24 +271,17 @@ function connect() {
     }
 }
 
-function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particlesArray.forEach(p => {
-        p.update();
-        p.draw();
-    });
-    connect();
-    requestAnimationFrame(animate);
+function animateParticles(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particlesArray.forEach(p=>{p.update();p.draw();});
+    connectParticles();
+    requestAnimationFrame(animateParticles);
 }
 
-init();
-animate();
+initParticles();
+animateParticles();
 
-window.addEventListener("resize", function() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    init();
-});
+window.addEventListener("resize",()=>{canvas.width=window.innerWidth; canvas.height=window.innerHeight; initParticles();});
 </script>
 
 </body>
