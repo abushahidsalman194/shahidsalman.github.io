@@ -12,8 +12,10 @@ body {
     background: #0f172a;
     color: #e2e8f0;
     overflow-x: hidden;
+    position: relative;
 }
 
+/* Particle canvas */
 canvas#particles {
     position: fixed;
     top: 0;
@@ -26,18 +28,12 @@ canvas#particles {
     margin: auto;
     padding: 100px 20px;
     text-align: center;
+    position: relative;
+    z-index: 1; /* make sure content is above canvas */
 }
 
-h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    font-size: 18px;
-    color: #94a3b8;
-    margin-bottom: 40px;
-}
+h1 { font-size: 48px; margin-bottom: 10px; }
+.subtitle { font-size: 18px; color: #94a3b8; margin-bottom: 40px; }
 
 .card {
     background: rgba(30, 41, 59, 0.85);
@@ -46,61 +42,59 @@ h1 {
     border-radius: 12px;
     margin-top: 25px;
     text-align: left;
+    position: relative;
+    z-index: 1;
 }
 
-.card img {
-    max-width: 100%;
-    border-radius: 12px;
-}
+.card img { max-width: 100%; border-radius: 12px; }
 
-h2 {
-    color: #38bdf8;
-    margin-top: 40px;
-}
+h2 { color: #38bdf8; margin-top: 40px; }
 
-a {
-    color: #38bdf8;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
 
 /* Markdown Styling */
-.markdown p, .markdown li {
-    color: #e2e8f0;
-    line-height: 1.6;
+.markdown p, .markdown li { color: #e2e8f0; line-height: 1.6; }
+.markdown strong { color: #facc15; }
+.markdown em { color: #f472b6; }
+.markdown blockquote { border-left: 3px solid #38bdf8; padding-left: 10px; color: #94a3b8; font-style: italic; }
+.markdown table { width: 100%; border-collapse: collapse; }
+.markdown th, .markdown td { border: 1px solid #94a3b8; padding: 8px; }
+.markdown th { background-color: rgba(56,189,248,0.2); }
+
+/* Side buttons */
+.sideBtn {
+    position: fixed;
+    right: 20px;
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 50;
 }
 
-.markdown strong {
-    color: #facc15;
+/* Side panels */
+.sidePanel {
+    position: fixed;
+    right: 20px;
+    top: 0px;
+    width: 300px;
+    max-height: 70%;
+    overflow-y: auto;
+    background: rgba(30,41,59,0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    display: none;
+    z-index: 49;
+    transition: all 0.3s ease;
 }
-
-.markdown em {
-    color: #f472b6;
-}
-
-.markdown blockquote {
-    border-left: 3px solid #38bdf8;
-    padding-left: 10px;
-    color: #94a3b8;
-    font-style: italic;
-}
-
-.markdown table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.markdown th, .markdown td {
-    border: 1px solid #94a3b8;
-    padding: 8px;
-}
-
-.markdown th {
-    background-color: rgba(56,189,248,0.2);
-}
+.sidePanel h2 { margin-top: 0; color: #38bdf8; }
+.sidePanel ul { list-style: none; padding-left: 0; }
+.sidePanel ul li { margin-bottom: 10px; }
 </style>
 </head>
 
@@ -111,19 +105,11 @@ a:hover {
 <div class="container">
     <div class="card markdown">
         <h1>Hi, I'm Salman</h1>
-
         <div align="center">
-            <img src="https://raw.githubusercontent.com/abushahidsalman194/shahidsalman.github.io/main/WhatsApp%20Image%202026-02-07%20at%2010.03.19%20PM.jpeg" 
-                 width="200" 
-                 alt="Salman Shahid"/>
+            <img src="https://raw.githubusercontent.com/abushahidsalman194/shahidsalman.github.io/main/WhatsApp%20Image%202026-02-07%20at%2010.03.19%20PM.jpeg" width="200" alt="Salman Shahid"/>
             <h3>BSc Mathematics | Applied Mathematics Researcher | Aspiring MS/PhD</h3>
-            <p>📍 Shahjalal University of Science & Technology<br>
-            🔬 Former Research Mentee @ REYES (UC Berkeley)<br>
-            🚀 Former Aspire Leader </p>
-            <p>
-                <a href="https://www.linkedin.com/in/abu-shahid-salman-867b66236/">LinkedIn</a> • 
-                <a href="mailto:abushahidsalman194@gmail.com">Email</a>
-            </p>
+            <p>📍 Shahjalal University of Science & Technology<br>🔬 Former Research Mentee @ REYES (UC Berkeley)<br>🚀 Former Aspire Leader</p>
+            <p><a href="https://www.linkedin.com/in/abu-shahid-salman-867b66236/">LinkedIn</a> • <a href="mailto:abushahidsalman194@gmail.com">Email</a></p>
         </div>
 
         <hr>
@@ -156,10 +142,7 @@ a:hover {
         <p><strong>Tools:</strong> Python (NumPy, Scikit-learn), MATLAB, LaTeX</p>
         <p><strong>Status:</strong> Phase 1 – Model formulation & validation</p>
 
-
-
         <hr>
-
         <h2>🛠️ Technical Toolkit</h2>
         <table>
             <tr><th>Domain</th><th>Skills & Tools</th></tr>
@@ -171,7 +154,6 @@ a:hover {
         </table>
 
         <hr>
-
         <h2>📈 Research Interests (Graduate Direction)</h2>
         <ul>
             <li>Mathematical Oncology</li>
@@ -181,7 +163,6 @@ a:hover {
         </ul>
 
         <hr>
-
         <h2>🏆 Competitions & Recognition</h2>
         <ul>
             <li>🥉 International Youth Math Challenge – Bronze Honor (Top 80% globally)</li>
@@ -192,7 +173,6 @@ a:hover {
         </ul>
 
         <hr>
-
         <h2>🤝 Leadership & Impact</h2>
         <ul>
             <li>Campus Ambassador – Banglalink: Organized youth festivals with 800+ participants</li>
@@ -201,9 +181,7 @@ a:hover {
         </ul>
 
         <hr>
-
         <h2>📫 Let's Connect</h2>
-        <p>I’m open to:</p>
         <ul>
             <li>Research collaborations</li>
             <li>Graduate opportunities</li>
@@ -211,128 +189,60 @@ a:hover {
             <li>AI & biology integration discussions</li>
         </ul>
         <p>📧 Email: abushahidsalman194@gmail.com<br>
-           🔗 LinkedIn: <a href="https://www.linkedin.com/in/abu-shahid-salman-867b66236/">abu-shahid-salman</a>
-        </p>
-
+           🔗 LinkedIn: <a href="https://www.linkedin.com/in/abu-shahid-salman-867b66236/">abu-shahid-salman</a></p>
         <hr>
         <blockquote>“Mathematics reveals the invisible structure beneath complexity.”</blockquote>
     </div>
 </div>
-    
+
 <!-- Buttons -->
-<button id="publicationsBtn" style="
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #38bdf8;
-    color: #0f172a;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    z-index: 10;
-">Publications</button>
-
-<button id="projectsBtn" style="
-    position: fixed;
-    top: 60px;
-    right: 20px;
-    background: #38bdf8;
-    color: #0f172a;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    z-index: 10;
-">Projects</button>
-
-<button id="scoresBtn" style="
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    background: #38bdf8;
-    color: #0f172a;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    z-index: 10;
-">Scores</button>
+<button class="sideBtn" data-panel="publicationsPanel" style="top:20px;">Publications</button>
+<button class="sideBtn" data-panel="projectsPanel" style="top:60px;">Projects</button>
+<button class="sideBtn" data-panel="scoresPanel" style="top:100px;">Scores</button>
 
 <!-- Panels -->
-
-<!-- Publications Panel -->
-<div id="publicationsPanel" style="
-    position: fixed;
-    top: 70px;
-    right: 20px;
-    width: 300px;
-    max-height: 70%;
-    overflow-y: auto;
-    background: rgba(30,41,59,0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 20px;
-    display: none;
-    z-index: 10;
-">
-    <h2 style="color:#38bdf8; margin-top:0;">Publications</h2>
-    <ul style="list-style:none; padding-left:0;">
+<div id="publicationsPanel" class="sidePanel">
+    <h2>Publications</h2>
+    <ul>
         <li><a href="#" target="_blank">Publication 1 – Cancer Modeling</a></li>
         <li><a href="#" target="_blank">Publication 2 – AI in Biology</a></li>
         <li><a href="#" target="_blank">Publication 3 – Stochastic Systems</a></li>
     </ul>
 </div>
 
-<!-- Projects Panel -->
-<div id="projectsPanel" style="
-    position: fixed;
-    top: 140px;
-    right: 20px;
-    width: 300px;
-    max-height: 70%;
-    overflow-y: auto;
-    background: rgba(30,41,59,0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 20px;
-    display: none;
-    z-index: 10;
-">
-    <h2 style="color:#38bdf8; margin-top:0;">Projects</h2>
-    <ul style="list-style:none; padding-left:0;">
+<div id="projectsPanel" class="sidePanel">
+    <h2>Projects</h2>
+    <ul>
         <li><a href="https://github.com/abushahidsalman194/project1" target="_blank">Project 1 – Tumor Growth Model</a></li>
         <li><a href="https://github.com/abushahidsalman194/project2" target="_blank">Project 2 – ML Metastasis Prediction</a></li>
         <li><a href="https://github.com/abushahidsalman194/project3" target="_blank">Project 3 – Dynamical Systems Simulation</a></li>
     </ul>
 </div>
 
-<!-- Scores Panel -->
-<div id="scoresPanel" style="
-    position: fixed;
-    top: 210px;
-    right: 20px;
-    width: 300px;
-    max-height: 70%;
-    overflow-y: auto;
-    background: rgba(30,41,59,0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 20px;
-    display: none;
-    z-index: 10;
-">
-    <h2 style="color:#38bdf8; margin-top:0;">Scores</h2>
-    <ul style="list-style:none; padding-left:0;">
+<div id="scoresPanel" class="sidePanel">
+    <h2>Scores</h2>
+    <ul>
         <li>GRE: 330</li>
         <li>TOEFL: 110</li>
         <li>Math Olympiad / International Math Challenge: Bronze</li>
     </ul>
 </div>
 
+<!-- Toggle Script -->
+<script>
+const buttons = document.querySelectorAll(".sideBtn");
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const panelId = btn.dataset.panel;
+        const panel = document.getElementById(panelId);
+        const isVisible = panel.style.display === "block";
+        // Hide all panels first
+        document.querySelectorAll(".sidePanel").forEach(p => p.style.display = "none");
+        // Toggle the clicked panel
+        panel.style.display = isVisible ? "none" : "block";
+    });
+});
+</script>
 
 <!-- Particle Animation Script -->
 <script>
